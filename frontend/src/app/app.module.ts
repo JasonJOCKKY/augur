@@ -8,15 +8,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Angular Material Modules
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+// Plotly
+import { PlotlyViaCDNModule } from 'angular-plotly.js';
+PlotlyViaCDNModule.setPlotlyVersion('latest');
+
+// Components
+import { MetricsPageComponent } from './metrics-page/metrics-page.component';
+import { PlotCompComponent } from './plot-comp/plot-comp.component';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MetricsPageComponent,
+    PlotCompComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    PlotlyViaCDNModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
