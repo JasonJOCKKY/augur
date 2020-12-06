@@ -20,7 +20,7 @@ function install_deps() {
     fi
 }
 
-read -r -p "Would you like to install Augur's frontend dependencies? [Y/n] " response
+read -r -p "Would you like to install Augur's frontend dependencies? [y/N] " response
 case "$response" in
   [yY][eE][sS]|[yY])
     echo "Installing..."
@@ -31,4 +31,3 @@ case "$response" in
     echo "Skipping frontend dependencies..."
     ;;
 esac
-

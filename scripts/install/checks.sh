@@ -2,7 +2,7 @@
 
 if [[ -z "$VIRTUAL_ENV" ]]; then
   echo "*** We noticed you're not currently inside a virtual environment. Augur MUST be run inside a virtual environment. ***"
-  read -r -p "*** Would you like us to generate a environment for you automatically? If you select no, you must create it yourself. [Y/n] " response
+  read -r -p "*** Would you like us to generate a environment for you automatically? If you select no, you must create it yourself. [y/N] " response
   case "$response" in
       [yY][eE][sS]|[yY])
           echo

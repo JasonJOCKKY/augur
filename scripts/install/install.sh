@@ -28,7 +28,7 @@ if [[ ! -e augur.config.json && ! -e $HOME/.augur/augur.config.json ]]; then
   echo "No config file found. Generating..."
   scripts/install/config.sh $target
 else
-  read -r -p "We noticed you have a config file already. Would you like to overwrite it with a new one? [Y/n] " response
+  read -r -p "We noticed you have a config file already. Would you like to overwrite it with a new one? [y/N] " response
   case "$response" in
       [yY][eE][sS]|[yY])
           echo "Generating a config file..."
