@@ -24,43 +24,23 @@ function get_api_key_and_repo_path() {
   echo
 
   echo "The Facade data collection worker will clone repositories to this machine to run its analysis."
-  echo "Would you like to clone to an existing directory, or create a new one?"
+  echo "You can either clone to an existing directory, or create a new one. Enter the path to a"
+  echo "directory of your choosing, if it does not exist it will be created."
+  echo "** You MUST use an absolute path. Variable expansion is currently not supported.**"
+  echo "    For example, if your desired directory is '~/facade-worker/', then the absolute path will be:"
+  echo "    /home/[your username]/facade-worker/"
 
-  select create_facade_repo in "Use an existing directory" "Create a new directory"
-  do
-    case $create_facade_repo in
-      "Use an existing directory" )
-          echo "** You MUST use an absolute path. Variable expansion is currently not supported.**"
-          read -p "Facade repo path: " facade_repo_directory
-          echo
+  read -p "Desired directory name: " facade_repo_directory
+  echo
 
-
-          while [[ ! -d "$facade_repo_directory" ]]; do
-            echo "That directory does not exist."
-            read -p "Facade repo path: " facade_repo_directory
-            echo
-          done
-
-          break
-        ;;
-      "Create a new directory" )
-          echo "** You MUST use an absolute path. Variable expansion is currently not supported.**"
-          read -p "Desired directory name: " facade_repo_directory
-          echo
-
-          if [[ -d "$facade_repo_directory" ]]; then
-            echo "That directory already exists. Using the given directory."
-            echo
-          else
-            mkdir "$facade_repo_directory"
-            echo "Directory created."
-            echo
-          fi
-
-          break
-        ;;
-    esac
-  done
+  if [[ -d "$facade_repo_directory" ]]; then
+    echo "That directory already exists. Using the given directory."
+    echo
+  else
+    mkdir "$facade_repo_directory"
+    echo "Directory created."
+    echo
+  fi
 
   [[ "${facade_repo_directory}" != */ ]] && facade_repo_directory="${facade_repo_directory}/"
 
@@ -134,6 +114,11 @@ do
   case $install_location in
     $install_locally )
         echo "Please enter the credentials for the default (or maintenance) user for your instance."
+        echo "On PostgreSQL the default user is 'postgres', to set the default user password on first time setup run:"
+        echo "  sudo -u postgres psql"
+        echo "This will log you into the default PostgreSQL user, then alter the role with:"
+        echo "  ALTER USER postgres PASSWORD 'new password';"
+        echo "If you get a result of 'ALTER ROLE', then you have successfully updated the default user password"
         echo "These will be used to log in to the database so that Augur can initalize a new database and install the schema for you."
 
         read -p "Default DB name: " default_db_name
@@ -147,9 +132,10 @@ do
         echo
 
         echo
-        echo "Now, please choose the credentials for the database you would create."
+        echo "Now, please choose the credentials for the local database to create."
         echo "If you are not sure to put , we recommend naming both your database and user as augur."
         echo "The choice of password if up to you; just make sure you don't forget it."
+        echo "These credentials will be used by Augur to connect to the database and manage data"
         echo
         set_db_credentials true
 
@@ -168,7 +154,7 @@ do
         break
       ;;
     $install_remotely )
-        echo "Please enter the credentials for the database."
+        echo "Please enter the credentials for the remote database."
         set_db_credentials
         # https://www.youtube.com/watch?v=rs9wuaVV33I
         create_db_schema
@@ -181,6 +167,3 @@ do
       ;;
   esac
 done
-
-
-

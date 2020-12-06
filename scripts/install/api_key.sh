@@ -18,7 +18,7 @@ function get_api_key() {
 existing_api_key=$(augur db get-api-key)
 echo
 if [[ $existing_api_key != *"invalid_key"* ]]; then
-  read -r -p "We noticed you have an Augur API key already. Would you like to overwrite it with a new one? [Y/n] " response
+  read -r -p "We noticed you have an Augur API key already. Would you like to overwrite it with a new one? [y/N] " response
   case "$response" in
       [yY][eE][sS]|[yY])
           echo
@@ -30,4 +30,3 @@ if [[ $existing_api_key != *"invalid_key"* ]]; then
 else
     get_api_key
 fi
-
