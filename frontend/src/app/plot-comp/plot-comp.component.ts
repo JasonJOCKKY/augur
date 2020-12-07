@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-plot-comp',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./plot-comp.component.scss']
 })
 export class PlotCompComponent implements OnInit {
+  // @Input() 
 
   public graph = {
     data: [
