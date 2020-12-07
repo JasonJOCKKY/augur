@@ -1,2 +1,23 @@
-<p>metrics-page works! Yeah!</p>
-<app-plot-comp></app-plot-comp>
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile [colspan]="2">
+        Repo Name
+    </mat-grid-tile>
+    <mat-grid-tile>
+        Total Contributors
+    </mat-grid-tile>
+    <mat-grid-tile>
+        Total Forks
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <app-plot-comp></app-plot-comp>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <app-plot-comp></app-plot-comp>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <app-plot-comp></app-plot-comp>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <app-plot-comp></app-plot-comp>
+    </mat-grid-tile>
+</mat-grid-list>

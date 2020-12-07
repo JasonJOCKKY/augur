@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Angular Material Modules
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 // Plotly
 import { PlotlyViaCDNModule } from 'angular-plotly.js';
@@ -27,8 +29,10 @@ import { PlotCompComponent } from './plot-comp/plot-comp.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
     PlotlyViaCDNModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
