@@ -1,4 +1,10 @@
+<button [routerLink]="['/Metrics']">Metrics</button>
+<button [routerLink]="['/ReposList']">Respos List</button>
+<!-- Need to match up with Everyone elses in the app-routing.module.ts to get exact names,
+    but will just be '/pageName'
+-->  
 <div>
+    
     <h2>Repo List</h2>
     <div>
         <table>
@@ -7,7 +13,7 @@
             </tr>
             <!--
                 Will need to access the data and dynamically input into the rows, most likely will be an ngFor
-                
+
             -->
         </table>
     </div>
