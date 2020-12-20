@@ -17,6 +17,7 @@ PlotlyViaCDNModule.setPlotlyVersion('latest');
 // Components
 import { MetricsPageComponent } from './metrics-page/metrics-page.component';
 import { PlotCompComponent } from './plot-comp/plot-comp.component';
+import { SingleNumCompComponent } from './single-num-comp/single-num-comp.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PlotCompComponent } from './plot-comp/plot-comp.component';
     AppComponent,
     MetricsPageComponent,
     PlotCompComponent,
+    SingleNumCompComponent,
   ],
   imports: [
     BrowserModule,

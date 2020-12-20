@@ -1,23 +1,18 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile [colspan]="2">
-        Repo Name
-    </mat-grid-tile>
-    <mat-grid-tile>
-        Total Contributors
-    </mat-grid-tile>
-    <mat-grid-tile>
-        Total Forks
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <app-plot-comp></app-plot-comp>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <app-plot-comp></app-plot-comp>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <app-plot-comp></app-plot-comp>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <app-plot-comp></app-plot-comp>
-    </mat-grid-tile>
-</mat-grid-list>
+<div class="container overflow-hidden">
+    <!-- Title -->
+    <div class="row my-3">
+        <h1 class="mb-0">Repo Name</h1>
+    </div>
+
+    <!-- Metrics -->
+    <div class="row my-3 gy-3">
+        <!-- Single Number Metrics -->
+        <div class="col-sm-6 col-12"><app-single-num-comp></app-single-num-comp></div>
+        <div class="col-sm-6 col-12"><app-single-num-comp></app-single-num-comp></div>
+        <!-- Graphs -->
+        <div class="col-sm-6 col-12"><app-plot-comp></app-plot-comp></div>
+        <div class="col-sm-6 col-12"><app-plot-comp></app-plot-comp></div>
+        <div class="col-sm-6 col-12"><app-plot-comp></app-plot-comp></div>
+        <div class="col-sm-6 col-12"><app-plot-comp></app-plot-comp></div>
+    </div>
+</div>
