@@ -1,8 +1,6 @@
 <mat-card>
-    <mat-card-title>Commits/Week</mat-card-title>
+    <mat-card-title>{{ description }}</mat-card-title>
     <mat-card-content>
         <plotly-plot [data]="data" [layout]="layout" [config]="config"></plotly-plot>
     </mat-card-content>
 </mat-card>
-
-<!-- <plotly-plot [data]="data" [layout]="layout" [config]="config"></plotly-plot> -->

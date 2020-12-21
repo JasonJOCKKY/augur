@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MetricsPageComponent } from './metrics-page/metrics-page.component';
 
 const routes: Routes = [
-  { path: 'metrics', component: MetricsPageComponent},
+  { path: 'metrics/:repo_id', component: MetricsPageComponent},
 ];
 
 @NgModule({

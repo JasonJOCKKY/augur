@@ -10,7 +10,7 @@ import { code_change } from "./test_data";
   styleUrls: ['./plot-comp.component.scss']
 })
 export class PlotCompComponent implements OnInit {
-  // @Input() 
+  @Input() description: string = "";
 
   public data = [
     {
@@ -53,8 +53,6 @@ export class PlotCompComponent implements OnInit {
       let date2 = new Date(b["date"]);
       return date1.getTime() - date2.getTime();
     });
-
-
 
     code_change.forEach(function (change) {
       x.push(change["date"]);

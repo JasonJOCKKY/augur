@@ -1,18 +1,21 @@
+<!-- Normal Metrics Page -->
 <div class="container overflow-hidden">
     <!-- Title -->
-    <div class="row my-3">
-        <h1 class="mb-0">Repo Name</h1>
+    <div class="row mt-5">
+        <h1 class="mb-0">{{ metrics.title }}</h1>
     </div>
 
     <!-- Metrics -->
     <div class="row my-3 gy-3">
         <!-- Single Number Metrics -->
-        <div class="col-sm-6 col-12"><app-single-num-comp></app-single-num-comp></div>
-        <div class="col-sm-6 col-12"><app-single-num-comp></app-single-num-comp></div>
+        <div class="col-sm-6 col-12" *ngFor="let metric of metrics.single_num_metrics">
+            <app-single-num-comp [description]="metric.description" [value]="metric.value"></app-single-num-comp>
+        </div>
         <!-- Graphs -->
-        <div class="col-sm-6 col-12"><app-plot-comp></app-plot-comp></div>
-        <div class="col-sm-6 col-12"><app-plot-comp></app-plot-comp></div>
-        <div class="col-sm-6 col-12"><app-plot-comp></app-plot-comp></div>
-        <div class="col-sm-6 col-12"><app-plot-comp></app-plot-comp></div>
+        <div class="col-sm-6 col-12" *ngFor="let metric of metrics.graph_metrics">
+            <app-plot-comp [description]="metric.description"></app-plot-comp>
+        </div>
     </div>
 </div>
+
+<!-- Error Page -->

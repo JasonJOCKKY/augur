@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 // Plotly
 import { PlotlyViaCDNModule } from 'angular-plotly.js';
@@ -35,6 +37,8 @@ import { SingleNumCompComponent } from './single-num-comp/single-num-comp.compon
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
