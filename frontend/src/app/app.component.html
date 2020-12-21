@@ -1,5 +1,12 @@
 <mat-toolbar color="primary">
   <span>Augur Frontend</span>
+  <button [routerLink]="['/Metrics']">Metrics</button>
+  <button [routerLink]="['/ReposList']">Respos List</button>
+  <button [routerLink]="['/home']">Respos Groups</button>
+<!--
+  Need to match up with Everyone elses in the app-routing.module.ts to get exact names,
+    but will just be '/pageName'
+-->  
 </mat-toolbar>
 
 <router-outlet></router-outlet>
