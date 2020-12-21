@@ -1,4 +1,5 @@
 <mat-card>
     <mat-card-subtitle>{{ description }}</mat-card-subtitle>
     <mat-card-title>{{ value }}</mat-card-title>
+    <mat-progress-bar mode="buffer" color="accent" *ngIf="!value"></mat-progress-bar>
 </mat-card>

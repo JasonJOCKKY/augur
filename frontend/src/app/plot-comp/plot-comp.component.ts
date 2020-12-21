@@ -36,7 +36,9 @@ export class PlotCompComponent implements OnInit {
   }
 
   public config = {
-    staticPlot: true
+    // staticPlot: true
+    editable: false,
+    displayModeBar: false
   }
 
   constructor() { }
