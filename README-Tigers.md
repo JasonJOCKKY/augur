@@ -11,11 +11,11 @@
 
 ## Issues
 1. Improving the logic/flow of install script
-  * [Adding more verbosity to the install script](https://github.com/JasonJOCKKY/augur-Tiger/issues/4)
-  * [Make the default selections Unix compliant](https://github.com/JasonJOCKKY/augur-Tiger/issues/5)
+   * [Adding more verbosity to the install script](https://github.com/JasonJOCKKY/augur-Tiger/issues/4)
+   * [Make the default selections Unix compliant](https://github.com/JasonJOCKKY/augur-Tiger/issues/5)
 2. Redesigning the front end using angular
-  * [Visualization Page](https://github.com/JasonJOCKKY/augur-Tiger/issues/3)
-  * [Home Page/Show all Repo Groups](https://github.com/JasonJOCKKY/augur-Tiger/issues/9)
+   * [Visualization Page](https://github.com/JasonJOCKKY/augur-Tiger/issues/3)
+   * [Home Page/Show all Repo Groups](https://github.com/JasonJOCKKY/augur-Tiger/issues/9)
   
 ## Resources Used
 - 
