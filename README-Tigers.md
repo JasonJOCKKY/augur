@@ -16,5 +16,8 @@
 2. Redesigning the front end using angular
   * [Visualization Page](https://github.com/JasonJOCKKY/augur-Tiger/issues/3)
   * [Home Page/Show all Repo Groups](https://github.com/JasonJOCKKY/augur-Tiger/issues/9)
+  
+## Resources Used
+- 
  
   
