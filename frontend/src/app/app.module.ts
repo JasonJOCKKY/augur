@@ -43,7 +43,7 @@ import { RepoListComponent } from './repo-list/repo-list.component';
     MatToolbarModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatTableModule
+    MatTableModule,
     PlotlyViaCDNModule,
     MatToolbarModule,
     MatCardModule,
