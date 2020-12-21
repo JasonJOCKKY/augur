@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SingleNumCompComponent implements OnInit {
   // Input Parameters
   @Input() description: string = "";
-  @Input() value: string = "";
+  @Input() value?: number = undefined;
 
   constructor() { }
 

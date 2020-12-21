@@ -1,20 +1,16 @@
+export interface GraphData {
+    date: string,
+    value: number
+}
+
 export interface Metrics {
     repo_name: string,
-    single_num_metrics: [
-      {
+    single_num_metrics: {
         description: string,
-        value: number
-      }
-    ] | [],
-    graph_metrics: [
-      {
+        value?: number
+    }[],
+    graph_metrics: {
         description: string,
-        data: [
-            {
-                date: string,
-                value: number
-            }
-        ] | []
-      }
-    ] | []
+        data?: GraphData[]
+    }[]
 }

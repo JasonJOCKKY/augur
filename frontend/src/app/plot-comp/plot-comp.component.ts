@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-import { code_change } from "./test_data";
+import { GraphData } from '../../models/metrics.model';
 
 // For testing
 
@@ -11,26 +10,25 @@ import { code_change } from "./test_data";
 })
 export class PlotCompComponent implements OnInit {
   @Input() description: string = "";
+  @Input() graphData?: GraphData[];
 
+  // Config for the plot
   public data = [
     {
       x: [""],
       y: [0],
-      type: 'scatter',
-      marker: { 
-        // color: 'blue' 
-      }
+      type: 'scatter'
     }
   ];
 
   public layout = {
     width: 520,
-    height: 240,
+    height: 300,
     margin: {
-      l: 20,
+      l: 30,
       r: 20,
       t: 20,
-      b: 20
+      b: 30
     },
     font: {
       family: 'Roboto, "Helvetica Neue", sans-serif;',
@@ -38,31 +36,24 @@ export class PlotCompComponent implements OnInit {
   }
 
   public config = {
-    // displayModeBar: false,
     staticPlot: true
   }
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges() {
     var x: string[] = [];
     var y: number[] = [];
-    
-    code_change.sort(function (a, b) {
-      let date1 = new Date(a["date"]);
-      let date2 = new Date(b["date"]);
-      return date1.getTime() - date2.getTime();
-    });
 
-    code_change.forEach(function (change) {
-      x.push(change["date"]);
-      y.push(change["commit_count"]);
+    this.graphData?.forEach(entry => {
+      x.push(entry.date);
+      y.push(entry.value);
     });
-    
 
     this.data[0].x = x;
     this.data[0].y = y;
-    // this.revision += 1;
   }
-
 }

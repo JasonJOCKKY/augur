@@ -17,7 +17,7 @@ export class AugurBackendService {
 
   /** For Metrics Data */
   getTotalForks(repo_id: string) {
-    const url = this.backend_api + '/repos/' + repo_id + '/fork_count';
+    const url = this.backend_api + '/repos/' + repo_id + '/fork-count';
     return this.http.get(url);
   }
 
@@ -49,23 +49,4 @@ export class AugurBackendService {
     const url = this.backend_api + '/repos/' + repo_id + '/reviews';
     return this.http.get(url);
   }
-
-  /// Get all the metrics
-  // getMetrics(repo_id: string) {
-  //   var resMetrics: Metrics = {
-  //     repo_name: "",
-  //     single_num_metrics: [],
-  //     graph_metrics: []
-  //   };
-
-  //   const resObs = new Observable<Metrics>((subscriber) => {
-  //     // Subscribe to every metrics request
-  //     this.getTotalForks(repo_id).subscribe((data) => {
-  //       resMetrics.repo_name = data["repo_name"];
-  //       resMetrics.single_num_metrics
-  //     });
-  //   });
-
-  //   return resObs;
-  // }
 }
