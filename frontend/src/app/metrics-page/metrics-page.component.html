@@ -1,0 +1,32 @@
+<!-- Normal Metrics Page -->
+<div class="container overflow-hidden" *ngIf="!errorMessage">
+    <!-- Title -->
+    <div class="row mt-4 mb-2">
+        <button mat-button color="accent" class="col-auto" (click)="navigateToGroup()">
+            <mat-icon inline="true">arrow_back</mat-icon>
+            Back to group 
+        </button>
+        <div class="col-auto"></div>
+    </div>
+    <div class="row">
+        <h1 class="mb-0 mat-display-2">{{ metrics.repo_name }}</h1>
+    </div>
+
+    <!-- Metrics -->
+    <div class="row my-3 gy-3">
+        <!-- Single Number Metrics -->
+        <div class="col-sm-6 col-12" *ngFor="let metric of metrics.single_num_metrics">
+            <app-single-num-comp [description]="metric.description" [value]="metric.value"></app-single-num-comp>
+        </div>
+        <!-- Graphs -->
+        <div class="col-sm-6 col-12" *ngFor="let metric of metrics.graph_metrics">
+            <app-plot-comp [description]="metric.description" [graphData]="metric.data"></app-plot-comp>
+        </div>
+    </div>
+</div>
+
+<!-- Error Page -->
+<div class="container" *ngIf="errorMessage">
+    <h1 class="mat-display-2 mt-5 mb-3">Error!</h1>
+    <h3>{{ errorMessage }}</h3>
+</div>

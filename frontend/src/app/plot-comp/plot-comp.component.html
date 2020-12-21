@@ -1,0 +1,7 @@
+<mat-card>
+    <mat-card-title>{{ description }}</mat-card-title>
+    <mat-card-content>
+        <mat-progress-bar mode="indeterminate" *ngIf="!graphData"></mat-progress-bar>
+        <plotly-plot [data]="data" [layout]="layout" [config]="config" *ngIf="graphData"></plotly-plot>
+    </mat-card-content>
+</mat-card>
