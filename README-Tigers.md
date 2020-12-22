@@ -15,7 +15,7 @@
    4. Install node dependencies by running `npm install`.
    5. For **testing purposes**, the frontend can be served on `http://localhost:4800` by running `ng serve`.
    6. To **build** the frontend for deployment, run `ng build --prod`. The build files will be located under `/frontend/dist`.
-- Need build instructions for him to be able to view install scripts
+- Running the install normally will allow you to see the improved and updated install scripts.
 
 ## Issues
 1. Improving the logic/flow of install script
