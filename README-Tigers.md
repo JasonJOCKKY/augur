@@ -7,9 +7,15 @@
 - [Android App](https://github.com/Ulincsys/Augur-View)
 
 ## How to build
-1. Please see the [Read Me](https://github.com/Ulincsys/Augur-View/blob/master/README.md) on the [Ulincsys Github](https://github.com/Ulincsys/Augur-View) for the build instrucions of the Android app.
-2. Need build instructions for front end
-3. Need build instructions for him to be able to view install scripts
+- Please see the [Read Me](https://github.com/Ulincsys/Augur-View/blob/master/README.md) on the [Ulincsys Github](https://github.com/Ulincsys/Augur-View) for the build instrucions of the Android app.
+- To preview the frontend
+   1. Enter the folder `/frontend`.
+   2. Make sure the latest NodeJS and npm are installed.
+   3. Make sure that angular cli is installed.  Can be installed with `npm install -g @angular/cli`.
+   4. Install node dependencies by running `npm install`.
+   5. For **testing purposes**, the frontend can be served on `http://localhost:4800` by running `ng serve`.
+   6. To **build** the frontend for deployment, run `ng build --prod`. The build files will be located under `/frontend/dist`.
+- Need build instructions for him to be able to view install scripts
 
 ## Issues
 1. Improving the logic/flow of install script
