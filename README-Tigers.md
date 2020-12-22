@@ -6,8 +6,10 @@
 - [FrontEnd (Angular)](https://github.com/JasonJOCKKY/augur-Tiger/tree/master/frontend)
 - [Android App](https://github.com/Ulincsys/Augur-View)
 
-## How to run our changes
-
+## How to build
+1. Please see the [Read Me](https://github.com/Ulincsys/Augur-View/blob/master/README.md) on the [Ulincsys Github](https://github.com/Ulincsys/Augur-View) for the build instrucions of the Android app.
+2. Need build instructions for front end
+3. Need build instructions for him to be able to view install scripts
 
 ## Issues
 1. Improving the logic/flow of install script
@@ -18,6 +20,7 @@
    * [Home Page/Show all Repo Groups](https://github.com/JasonJOCKKY/augur-Tiger/issues/9)
   
 ## Resources Used
-- 
+- [NgFor (Angular)](https://angular.io/api/common/NgForOf)
+- [Angular Tables](https://material.angular.io/components/table/overview)
  
   
